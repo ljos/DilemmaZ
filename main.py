@@ -16,7 +16,8 @@ def index_article():
     results["abstract"] = request.form.get("abstract")
     results["dilemma_body"] = request.form.get("dilemma_body")
     results["keyword"] = request.form.get("keyword")
-    results["article_url"] = request.form.get("article_url") es.index(index='dilemma', doc_type='articles', body=results)
+    results["article_url"] = request.form.get("article_url") 
+    es.index(index='dilemma', doc_type='articles', body=results)
     return "Probably works"
 
 @app.route("/search", methods=["GET","POST"])
