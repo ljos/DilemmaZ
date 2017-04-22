@@ -45,5 +45,5 @@ def all():
     for hits in e["hits"]["hits"]:
         results.append(hits["_source"])
     return render_template('search_results.html', results=results)
-
-app.run()
+if __name__ == '__main__':
+    app.run(host="0.0.0.0")
