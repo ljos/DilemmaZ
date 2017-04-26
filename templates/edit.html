@@ -1,0 +1,9 @@
+<form action="/articles/update/{{ id }}" method=post>
+    Title: <input type=text name=title value="{{ form.title}}"></br>
+    Authors: <input type=text name=authors value="{{ form.authors }}"></br>
+    Abstract: <input type=text name=abstract value="{{ form.abstract}}"></br>
+    Dilemma Body: <input type=text name=dilemma_body value="{{ form.dilemma_body}}"></br>
+    Keywords: <input type=text name=keywords value="{{ form.keywords}}"></br>
+    Article URL: <input type=text name=article_url value="{{ form.article_url}}"></br>
+    <div class="actions"><input type=submit value="Update"></div>
+</form>

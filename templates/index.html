@@ -1,17 +1,19 @@
-Hello World
-<form action="/search" method=post>
+<a href="/articles/all"> All articles</a>
+<a href="/dilemmas/all"> All dilemmas</a>
+
+<form action="/articles/search" method=post>
     <input type=text name=search value="{{ request.form.search}}"></br>
     <div class="actions"><input type=submit value="Search"></div>
 </form>
 
-<form action="/index_article" method=post>
+<form action="/articles/index" method=post>
     Title: <input type=text name=title value="{{ request.form.title}}"></br>
     Authors: <input type=text name=authors value="{{ request.form.authors }}"></br>
     Abstract: <input type=text name=abstract value="{{ request.form.abstract}}"></br>
     Dilemma Body: <input type=text name=dilemma_body value="{{ request.form.dilemma_body}}"></br>
-    Keyword: <input type=text name=keyword value="{{ request.form.keyword}}"></br>
+    Keywords: <input type=text name=keywords value="{{ request.form.keywords}}"></br>
     Article URL: <input type=text name=article_url value="{{ request.form.article_url}}"></br>
-    <div class="actions"><input type=submit value="Search"></div>
+    <div class="actions"><input type=submit value="Index"></div>
 </form>
 
 
