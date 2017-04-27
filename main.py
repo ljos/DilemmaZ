@@ -10,6 +10,7 @@ def index():
 
 @app.route("/articles/index", methods=["GET","POST"])
 def articles_index():
+    print(request.form)
     results = {}
     results["title"] = request.form.get("title")
     results["authors"] = request.form.get("authors")

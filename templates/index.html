@@ -1,20 +1,123 @@
-<a href="/articles/all"> All articles</a>
-<a href="/dilemmas/all"> All dilemmas</a>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>INFO381</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.css">
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-<form action="/articles/search" method=post>
-    <input type=text name=search value="{{ request.form.search}}"></br>
-    <div class="actions"><input type=submit value="Search"></div>
-</form>
 
-<form action="/articles/index" method=post>
-    Title: <input type=text name=title value="{{ request.form.title}}"></br>
-    Authors: <input type=text name=authors value="{{ request.form.authors }}"></br>
-    Abstract: <input type=text name=abstract value="{{ request.form.abstract}}"></br>
-    Dilemma Body: <input type=text name=dilemma_body value="{{ request.form.dilemma_body}}"></br>
-    Keywords: <input type=text name=keywords value="{{ request.form.keywords}}"></br>
-    Article URL: <input type=text name=article_url value="{{ request.form.article_url}}"></br>
-    <div class="actions"><input type=submit value="Index"></div>
-</form>
+  <body>
+      <div class="container">
+          <div class="page-header", id="banne">
+              <div class="row">
+                  <div class="col-lg-8 col-md-7 col-sm-6">
+                      <h1>INFO381</h1>
+                      <p class="lead">Ethical Dilemma searcher</p>
+                  </div>
+              </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-3"></div>
+                  <form class="navbar-form navbar-left" role="search" action="/articles/search" method="post">
+                      <div class="form-group">
+                          <input type="text" name="search" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-default">Search</button>
+                  </form>
+              </div>
+              <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4">
+                      <div class="list-group table-of-contents">
+                          <a class="list-group-item" href="/articles/all"> All articles</a>
+                          <a class="list-group-item" href="/dilemmas/all"> All dilemmas</a>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="well bs-component">
+                          <form class="form-horizontal" role="index" action="/articles/index" method=post>
+                              <fieldset>
+                                  <legend>
+                                      Index new article
+                                  </legend>
+                                  <div class="form-group">
+                                      <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+                                      <div class="col-lg-10">
+                                          <input name=title type="text" class="form-control" id="inputTitle" placeholder="Title">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="inputAuthors" class="col-lg-2 control-label">Authors</label>
+                                      <div class="col-lg-10">
+                                          <input name=authors type="text" class="form-control" id="inputAuthors" placeholder="Authors">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="inputAbstract" class="col-lg-2 control-label">Abstract</label>
+                                      <div class="col-lg-10">
+                                          <textarea name=abstract type="text" rows=3 class="form-control" id="inputAbstract" placeholder="Abstract"></textarea>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="inputDilemmaBody" class="col-lg-2 control-label">Dilemma Body</label>
+                                      <div class="col-lg-10">
+                                          <textarea name=dilemma_body type="text" rows=3 class="form-control" id="inputDilemmaBody" placeholder="Dilemma Body"></textarea>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="inputKeywords" class="col-lg-2 control-label">Keywords</label>
+                                      <div class="col-lg-10">
+                                          <input name=keywords type="text" class="form-control" id="inputKeywords" placeholder="Keywords">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="inputArticleURL" class="col-lg-2 control-label">Article URL</label>
+                                      <div class="col-lg-10">
+                                          <input name=article_url type="text" class="form-control" id="inputArticleURL" placeholder="ArticleURL">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <div class="col-lg-10">
+                                          <button type=submit" class="btn btn-primary"> Submit </button>
+                                      </div>
+                                  </div>
+
+                              </fieldset>
+                              <!-- <div class="form-group"> -->
+                              <!--     Title: <input class="form-control" type=text name=title value="{{ request.form.title}}"></br> -->
+                              <!--     Authors: <input class="form-control" type=text name=authors value="{{ request.form.authors }}"></br> -->
+                              <!--     Abstract: <input class="form-control" type=text name=abstract value="{{ request.form.abstract}}"></br> -->
+                              <!--     Dilemma Body: <input class="form-control" type=text name=dilemma_body value="{{ request.form.dilemma_body}}"></br> -->
+                              <!--     Keywords: <input class="form-control" type=text name=keywords value="{{ request.form.keywords}}"></br> -->
+                              <!--     Article URL: <input class="form-control" type=text name=article_url value="{{ request.form.article_url}}"></br> -->
+                              <!--     <button type="submit" class="btn btn-default">Index</button> -->
+                              <!-- </div> -->
+                          </form>
+                      </div>
+                  </div>
+
+
+              </div>
+              <div class="row">
+              </div>
+
+          </div>
+
+
 
 
 
@@ -25,3 +128,6 @@
 <!-- “keywords”: “”, -->
 <!-- “dilemma_type”: “”, -->
 <!-- “article_url”:””, -->
+    </div>
+</body>
+</html>
