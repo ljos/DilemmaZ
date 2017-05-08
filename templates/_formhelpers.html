@@ -1,0 +1,14 @@
+{% macro render_field(field) %}
+<div class="form-group">
+  <label class="col-lg-2 control-label">{{field.label.text.capitalize()}}</label>
+  <div class="col-lg-10">
+  {{ field(**kwargs)|safe }}
+  {% if field.errors %}
+    {% for error in field.errors %}
+        <p class="text-warning">{{ error }}</p>
+    {% endfor %}
+  {% endif %}
+  </div>
+  </div>
+{% endmacro %}
+
