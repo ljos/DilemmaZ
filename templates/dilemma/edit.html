@@ -1,17 +1,17 @@
-
 {%- extends "base.html" -%}
 {% block content %}
                   <div class="col-lg-6">
                       <div class="well bs-component">
-                          <form class="form-horizontal" role="index" action="/dilemma/index" method=post>
+                          <form class="form-horizontal" role="index" action="/dilemma/edit/{{ id }}" method=post>
                               <fieldset>
+                                {{ form.hidden_tag() }}
                                   <legend>
-                                      Index new dilemma
+                                      Update dilemma 
                                   </legend>
+
                                   {{ render_field(form.name, class="form-control", placeholder="Name") }}
                                   {{ render_field(form.dilemma, class="form-control", placeholder="Dilemma") }}
                                   {{ form.submit(class="btn-primary btn")}}
-
                               </fieldset>
                           </form>
                       </div>

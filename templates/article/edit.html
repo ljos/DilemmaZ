@@ -1,12 +1,24 @@
 {%- extends "base.html" -%}
 {% block content %}
-<form action="/articles/update/{{ id }}" method=post>
-    Title: <input type=text name=title value="{{ form.title}}"></br>
-    Authors: <input type=text name=authors value="{{ form.authors }}"></br>
-    Abstract: <input type=text name=abstract value="{{ form.abstract}}"></br>
-    Dilemma Body: <input type=text name=dilemma_body value="{{ form.dilemma_body}}"></br>
-    Keywords: <input type=text name=keywords value="{{ form.keywords}}"></br>
-    Article URL: <input type=text name=article_url value="{{ form.article_url}}"></br>
-    <div class="actions"><input type=submit value="Update"></div>
-</form>
+                  <div class="col-lg-6">
+                      <div class="well bs-component">
+                          <form class="form-horizontal" role="index" action="/articles/edit/{{ id }}" method=post>
+                              <fieldset>
+                                {{ form.hidden_tag() }}
+                                  <legend>
+                                      Update article
+                                  </legend>
+
+
+                                  {{ render_field(form.title, class="form-control", placeholder="Title") }}
+                                  {{ render_field(form.authors, class="form-control", placeholder="Authors") }}
+                                  {{ render_field(form.abstract, class="form-control", placeholder="Abstract") }}
+                                  {{ render_field(form.dilemma_body, class="form-control", placeholder="Dilemma Body") }}
+                                  {{ render_field(form.keywords, class="form-control", placeholder="Keywords") }}
+                                  {{ render_field(form.article_url, class="form-control", placeholder="Article URL") }}
+                                  {{ form.submit(class="btn-primary btn")}}
+                              </fieldset>
+                          </form>
+                      </div>
+                  </div>
 {%- endblock %}
