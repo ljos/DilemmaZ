@@ -8,72 +8,17 @@
                                       Index new article
                                   </legend>
 
-
                                   {{ render_field(form.title, class="form-control", placeholder="Title") }}
                                   {{ render_field(form.authors, class="form-control", placeholder="Authors") }}
-                                  {{ render_field(form.abstract, class="form-control", placeholder="Abstract") }}
                                   {{ render_field(form.dilemma_body, class="form-control", placeholder="Dilemma Body") }}
-                                  {{ render_field(form.keywords, class="form-control", placeholder="Keywords") }}
                                   {{ render_field(form.article_url, class="form-control", placeholder="Article URL") }}
-                                  {{ render_field(form.submit, class="button-primary") }}
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputTitle" class="col-lg-2 control-label">Title</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <input name=title type="text" class="form-control" id="inputTitle" placeholder="Title"> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputAuthors" class="col-lg-2 control-label">Authors</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <input name=authors type="text" class="form-control" id="inputAuthors" placeholder="Authors"> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputAbstract" class="col-lg-2 control-label">Abstract</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <textarea name=abstract type="text" rows=3 class="form-control" id="inputAbstract" placeholder="Abstract"></textarea> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputDilemmaBody" class="col-lg-2 control-label">Dilemma Body</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <textarea name=dilemma_body type="text" rows=3 class="form-control" id="inputDilemmaBody" placeholder="Dilemma Body"></textarea> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputKeywords" class="col-lg-2 control-label">Keywords</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <input name=keywords type="text" class="form-control" id="inputKeywords" placeholder="Keywords"> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <label for="inputArticleURL" class="col-lg-2 control-label">Article URL</label> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <input name=article_url type="text" class="form-control" id="inputArticleURL" placeholder="ArticleURL"> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
-                                  <!-- <div class="form-group"> -->
-                                  <!--     <div class="col-lg-10"> -->
-                                  <!--         <button type="submit" class="btn btn-primary"> Submit </button> -->
-                                  <!--     </div> -->
-                                  <!-- </div> -->
-
+                                  {{ render_field(form.logic, class="form-control", placeholder="Logic") }}
+                                  {{ render_field(form.feature, class="form-control", placeholder="Feature") }}
+                                  {{ render_field(form.actions, class="form-control", placeholder="Actions") }}
+                                  {{ render_field(form.case, class="form-control", placeholder="Case") }}
+                                  {{ render_field(form.duty_values, class="form-control", placeholder="Duty Values") }}
+                                  {{ form.submit(class="btn-primary btn")}}
                               </fieldset>
-                              <!-- <div class="form-group"> -->
-                              <!--     Title: <input class="form-control" type=text name=title value="{{ request.form.title}}"></br> -->
-                              <!--     Authors: <input class="form-control" type=text name=authors value="{{ request.form.authors }}"></br> -->
-                              <!--     Abstract: <input class="form-control" type=text name=abstract value="{{ request.form.abstract}}"></br> -->
-                              <!--     Dilemma Body: <input class="form-control" type=text name=dilemma_body value="{{ request.form.dilemma_body}}"></br> -->
-                              <!--     Keywords: <input class="form-control" type=text name=keywords value="{{ request.form.keywords}}"></br> -->
-                              <!--     Article URL: <input class="form-control" type=text name=article_url value="{{ request.form.article_url}}"></br> -->
-                              <!--     <button type="submit" class="btn btn-default">Index</button> -->
-                              <!-- </div> -->
                           </form>
                       </div>
                   </div>

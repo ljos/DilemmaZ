@@ -7,15 +7,8 @@
 {% if item["type"] == "articles" %}
 <h1>{{ item.title}}</h1></br>
 {{ item.authors}}</br>
-{{ item.abstract}}</br>
 {{ item.dilemma_body}}</br>
 <a href="/articles/edit/{{item.id}}"> Edit </a>
-<br>
-{% endif %}
-{% if item["type"] == "dilemma" %}
-<h1>{{ item.name}}</h1></br>
-{{ item.dilemma}}</br>
-<a href="/dilemma/edit/{{item.id}}"> Edit </a>
 <br>
 {% endif %}
                       </div>

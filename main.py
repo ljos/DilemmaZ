@@ -20,13 +20,17 @@ def articles_index():
     if request.method == 'POST' and not form.validate():
         flash("There was an error with the form", "warning")
         return render_template('article/add.html', form=form)
+
     results = {}
     results["title"] = request.form.get("title")
     results["authors"] = request.form.get("authors")
-    results["abstract"] = request.form.get("abstract")
     results["dilemma_body"] = request.form.get("dilemma_body")
-    results["keywords"] = request.form.get("keywords")
     results["article_url"] = request.form.get("article_url") 
+    results["logic"] = request.form.get("logic")
+    results["feature"] = request.form.get("features")
+    results["actions"] = request.form.get("actions")
+    results["case"] = request.form.get("case")
+    results["duty_values"] = request.form.get("duty_values")
     es.index(index='dilemma', doc_type='articles', body=results)
     flash("Added article", "success")
     return render_template('article/add.html', form=form)
@@ -40,7 +44,8 @@ def articles_search():
             "query": {
                 "multi_match": {
                         "query": term,
-                        "fields": [ "title", "authors", "abstract", "dilemma_body", "name","dilemma" ],
+                        "fields": [ "title", "authors",
+                            "dilemma_body","article_url","logic","feature","actions","case","duty_values" ],
                         "fuzziness": "AUTO"
                     }
                 }
@@ -72,10 +77,13 @@ def articles_edit(id):
     if not form.is_submitted():
         form.title.data = data["title"]
         form.authors.data = data["authors"]
-        form.abstract.data = data["abstract"]
         form.dilemma_body.data = data["dilemma_body"]
-        form.keywords.data = data["keywords"]
         form.article_url.data = data["article_url"]
+        form.logic.data = data["logic"]
+        form.feature.data = data["feature"]
+        form.actions.data = data["actions"]
+        form.case.data = data["case"]
+        form.duty_values.data = data["duty_values"]
 
     if not form.validate_on_submit():
         if form.errors:
@@ -85,10 +93,13 @@ def articles_edit(id):
     results = {}
     results["title"] = request.form.get("title")
     results["authors"] = request.form.get("authors")
-    results["abstract"] = request.form.get("abstract")
     results["dilemma_body"] = request.form.get("dilemma_body")
-    results["keywords"] = request.form.get("keywords")
     results["article_url"] = request.form.get("article_url") 
+    results["logic"] = request.form.get("logic")
+    results["feature"] = request.form.get("features")
+    results["actions"] = request.form.get("actions")
+    results["case"] = request.form.get("case")
+    results["duty_values"] = request.form.get("duty_values")
 
     es.update(index='dilemma', doc_type='articles', id=id, body={"doc": results})
     flash("Updated article", "success")
