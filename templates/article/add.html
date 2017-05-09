@@ -1,27 +1,29 @@
 {%- extends "base.html" -%}
 {% block content %}
-                  <div class="col-lg-6">
-                      <div class="well bs-component">
-                          <form class="form-horizontal" role="index" action="/articles/index" method=post>
-                              <fieldset>
-                                {{ form.hidden_tag() }}
-                                  <legend>
-                                      Index new article
-                                  </legend>
+<div class="col-lg-9 col-md-offset-3">
+  <div class="well bs-component">
+    <form class="form-horizontal" role="index" action="/articles/index" method=post>
+      <fieldset>
+        {{ form.hidden_tag() }}
+        <h2>
+          Index new article
+        </h2>
 
-                                  {{ render_field(form.title, class="form-control", placeholder="Title") }}
-                                  {{ render_field(form.authors, class="form-control", placeholder="Authors") }}
-                                  {{ render_field(form.dilemma_body, class="form-control", placeholder="Dilemma Body") }}
-                                  {{ render_field(form.article_url, class="form-control", placeholder="Article URL") }}
-                                  {{ render_field(form.logic, class="form-control", placeholder="Logic") }}
-                                  <h1>Representation Form</h1>
-                                  {{ render_field(form.feature, class="form-control", placeholder="Feature") }}
-                                  {{ render_field(form.actions, class="form-control", placeholder="Actions") }}
-                                  {{ render_field(form.case, class="form-control", placeholder="Case") }}
-                                  {{ render_field(form.duty_values, class="form-control", placeholder="Duty Values") }}
-                                  {{ form.submit(class="btn-primary btn")}}
-                              </fieldset>
-                          </form>
-                      </div>
-                  </div>
+        {{ render_field(form.title, class="form-control form-width", placeholder="Title") }}
+        {{ render_field(form.authors, class="form-control form-width", placeholder="Authors") }}
+        {{ render_field(form.dilemma_body, class="form-control form-width", id="form-dilemma-body", placeholder="Dilemma Body") }}
+        {{ render_field(form.article_url, class="form-control form-width", placeholder="Article URL") }}
+        <h3>Prolog Syntax</h3>
+        {{ render_field(form.logic, class="form-control form-width", id="form-logic", placeholder="Logic") }}
+        <h3>Representation Form</h3>
+        {{ render_field(form.feature, class="form-control form-width", id="form-features", placeholder="Logic") }}
+        {{ render_field(form.case, class="form-control form-width", placeholder="Case") }}
+        {{ render_field(form.actions, class="form-control form-width", placeholder="Actions") }}
+
+        {{ render_field(form.duty_values, class="form-control form-width", placeholder="Duty Values") }}
+        {{ form.submit(class="btn-primary btn col-lg-3 col-md-offset-4")}}
+      </fieldset>
+    </form>
+  </div>
+</div>
 {%- endblock %}
