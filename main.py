@@ -119,7 +119,7 @@ def articles_edit(id):
 
     es.update(index='dilemma', doc_type='articles', id=id, body={"doc": results})
     flash("Updated article", "success")
-    return redirect(url_for('edit'))
+    return redirect(url_for('articles_edit', id=id))
 
 @app.route("/articles/delete/<id>")
 def articles_delete(id):
