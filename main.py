@@ -7,6 +7,7 @@ from forms.article import Article
 es = Elasticsearch([{'host': 'velox.vulpes.pw', 'port': 9200}])
 app = Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
+app.secret_key="LOLKEKSECURE"
 
 @app.route("/")
 def index():
@@ -128,5 +129,4 @@ def articles_delete(id):
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.secret_key="LOLKEKSECURE"
     app.run(host="0.0.0.0", debug=True)
