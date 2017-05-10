@@ -2,12 +2,20 @@
 {% block content %}
 {% for item in results %}
 
-                  <div class="col-lg-6">
+                  <div class="col-lg-12">
                       <div class="well bs-component">
 {% if item["type"] == "articles" %}
 <h1>{{ item.title}}</h1></br>
 {{ item.authors}}</br>
 {{ item.dilemma_body}}</br>
+{{ item.dilemma_body}}</br>
+<h3>Logic</h3></br>
+{{ item.logic}}</br>
+<h3>Representation schema</h3></br>
+<h4>Features: </h4>{{ item.feature}}</br>
+<h4>Case: </h4>{{ item.case}}</br>
+<h4>Actions: </h4>{{ item.actions}}</br>
+<h4>Duty-value set: </h4>{{ item.duty_values}}</br>
 <a href="/articles/edit/{{item.id}}"> Edit </a>
 <br>
 {% endif %}
