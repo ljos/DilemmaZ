@@ -36,6 +36,21 @@ def articles_index():
     return render_template('article/add.html', form=form)
 
 
+def _render_hits(results):
+    # We really want everyting on newlines
+    ret = []
+    for hits in results["hits"]["hits"]:
+        source = hits["_source"]
+        source["id"] = hits["_id"]
+        source["type"] = hits["_type"]
+        if source["logic"]:
+            source["logic"] = [i for i in source["logic"].split("\r\n")] 
+        source["feature"] = [i for i in source["feature"].split("\r\n")] 
+        if source["duty_values"]:
+            source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
+        ret.append(source)
+    return ret
+
 @app.route("/articles/search", methods=["GET","POST"])
 def articles_search():
     results = []
@@ -50,23 +65,14 @@ def articles_search():
                     }
                 }
             })
-    for hits in e["hits"]["hits"]:
-        source = hits["_source"]
-        source["type"] = hits["_type"]
-        results.append(source)
-    print(source)
+    results = _render_hits(e)
     return render_template('search_results.html', results=results)
 
 
 @app.route("/articles/all")
 def articles_all():
     e = es.search(index="dilemma", doc_type="articles", body={"query": {"match_all": {}}})
-    results = []
-    for hits in e["hits"]["hits"]:
-        doc = hits["_source"]
-        doc["id"] = hits["_id"]
-        doc["type"] = hits["_type"]
-        results.append(doc)
+    results = _render_hits(e)
     return render_template('search_results.html', results=results)
 
 @app.route("/articles/edit/<id>", methods=["GET","POST"])

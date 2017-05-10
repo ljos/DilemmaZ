@@ -10,12 +10,19 @@
 {{ item.dilemma_body}}</br>
 {{ item.dilemma_body}}</br>
 <h3>Logic</h3></br>
-{{ item.logic}}</br>
+{% for line in item.logic %}
+{{ line|safe}}</br>
+{% endfor %}
 <h3>Representation schema</h3></br>
-<h4>Features: </h4>{{ item.feature}}</br>
+<h4>Features: </h4>{% for line in item.feature%}
+{{ line|safe}}</br>
+{% endfor %}
 <h4>Case: </h4>{{ item.case}}</br>
 <h4>Actions: </h4>{{ item.actions}}</br>
-<h4>Duty-value set: </h4>{{ item.duty_values}}</br>
+<h4>Duty-value set: </h4>{% for line in item.duty_values%}
+{{ line|safe}}</br>
+{% endfor %}
+
 <a href="/articles/edit/{{item.id}}"> Edit </a>
 <br>
 {% endif %}
