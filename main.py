@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from elasticsearch import Elasticsearch
 import json
 
-from forms.dilemma import Dilemma
+from flask import Flask, render_template, request, redirect, url_for, flash
+from elasticsearch import Elasticsearch
 from forms.article import Article
 
 es = Elasticsearch([{'host': 'velox.vulpes.pw', 'port': 9200}])
@@ -11,14 +10,18 @@ app.config['WTF_CSRF_ENABLED'] = False
 
 @app.route("/")
 def index():
-    form = Article()
-    return render_template('article/add.html', form=form)
+    return redirect(url_for('articles_all'))
 
 @app.route("/articles/index", methods=["GET","POST"])
 def articles_index():
     form = Article()
     if request.method == 'POST' and not form.validate():
         flash("There was an error with the form", "warning")
+        return render_template('article/add.html', form=form)
+
+    if not form.validate_on_submit():
+        if form.errors:
+            flash("There was an error", "warning")
         return render_template('article/add.html', form=form)
 
     results = {}
@@ -45,10 +48,16 @@ def _render_hits(results):
         source["type"] = hits["_type"]
         if source["logic"]:
             source["logic"] = [i for i in source["logic"].split("\r\n")] 
+        else:
+            source["logic"] = []
         if source["feature"]:
             source["feature"] = [i for i in source["feature"].split("\r\n")] 
+        else:
+            source["feature"] = []
         if source["duty_values"]:
             source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
+        else:
+            source["duty_values"] = []
         ret.append(source)
     return ret
 
@@ -110,54 +119,12 @@ def articles_edit(id):
 
     es.update(index='dilemma', doc_type='articles', id=id, body={"doc": results})
     flash("Updated article", "success")
-    return redirect(url_for('index'))
+    return redirect(url_for('edit'))
 
-
-@app.route("/dilemma/index", methods=["GET","POST"])
-def dilemma_add():
-    form = Dilemma()
-    if not form.is_submitted():
-        return render_template('dilemma/add.html', form=form)
-    if request.method == 'POST' and not form.validate():
-        flash("There was an error with the form", "warning")
-        return render_template('dilemma/add.html', form=form)
-    results = {}
-    results["name"] = request.form.get("name")
-    results["dilemma"] = request.form.get("dilemma")
-    es.index(index='dilemma', doc_type='dilemma', body=results)
-    flash("Added dilemma", "success")
-    return redirect(url_for('index'))
-
-@app.route("/dilemma/all")
-def dilemma_all():
-    e = es.search(index="dilemma", doc_type="dilemma", body={"query": {"match_all": {}}})
-    results = []
-    for hits in e["hits"]["hits"]:
-        doc = hits["_source"]
-        doc["id"] = hits["_id"]
-        doc["type"] = hits["_type"]
-        results.append(doc)
-    return render_template('search_results.html', results=results)
-
-@app.route("/dilemma/edit/<id>", methods=["GET","POST"])
-def dilemma_edit(id):
-    e = es.get(index="dilemma", doc_type="dilemma", id=id)
-    data = e["_source"]
-    form = Dilemma()
-    if not form.is_submitted():
-        form.name.data = data["name"]
-        form.dilemma.data = data["dilemma"]
-
-    if not form.validate_on_submit():
-        if form.errors:
-            flash("There was an error", "warning")
-        return render_template('dilemma/edit.html', id=id, form=form)
-
-    results = {}
-    results["name"] = request.form.get("name")
-    results["dilemma"] = request.form.get("dilemma")
-    es.update(index='dilemma', doc_type='dilemma', id=id, body={"doc": results})
-    flash("Updated dilemma", "success")
+@app.route("/articles/delete/<id>")
+def articles_delete(id):
+    es.delete(index='dilemma', doc_type='articles', id=id)
+    flash("Deleted article", "success")
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
