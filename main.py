@@ -45,7 +45,8 @@ def _render_hits(results):
         source["type"] = hits["_type"]
         if source["logic"]:
             source["logic"] = [i for i in source["logic"].split("\r\n")] 
-        source["feature"] = [i for i in source["feature"].split("\r\n")] 
+        if source["feature"]:
+            source["feature"] = [i for i in source["feature"].split("\r\n")] 
         if source["duty_values"]:
             source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
         ret.append(source)
