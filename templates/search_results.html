@@ -18,12 +18,21 @@
 {{ line|safe}}</br>
 {% endfor %}
 <h4>Case: </h4>{{ item.case}}</br>
-<h4>Actions: </h4>{{ item.actions}}</br>
+<h4>Actions: </h4>{% for line in item.actions%}
+{{ line|safe}}</br>
+{% endfor %}
 <h4>Duty-value set: </h4>{% for line in item.duty_values%}
 {{ line|safe}}</br>
 {% endfor %}
 
-<a href="/articles/edit/{{item.id}}"> Edit </a> <a href="/articles/delete/{{item.id}}"> Delete </a>
+<a href="/articles/edit/{{item.id}}"> Edit </a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="/articles/delete/{{item.id}}"> Delete </a>
 <br>
 {% endif %}
                       </div>

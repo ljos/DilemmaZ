@@ -59,6 +59,11 @@ def _render_hits(results):
             source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
         else:
             source["duty_values"] = []
+
+        if source["actions"]:
+            source["actions"] = [i for i in source["actions"].split("\r\n")]
+        else:
+            source["actions"] = []
         ret.append(source)
     return ret
 
