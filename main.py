@@ -1,5 +1,7 @@
 import json
 
+from collections import OrderedDict
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 from elasticsearch import Elasticsearch
 from forms.article import Article
@@ -39,31 +41,34 @@ def articles_index():
     flash("Added article", "success")
     return render_template('article/add.html', form=form)
 
+def _format_hit(hits):
+    source = hits["_source"]
+    source["id"] = hits["_id"]
+    source["type"] = hits["_type"]
+    if source["logic"]:
+        source["logic"] = [i for i in source["logic"].split("\r\n")] 
+    else:
+        source["logic"] = []
+    if source["feature"]:
+        source["feature"] = [i for i in source["feature"].split("\r\n")] 
+    else:
+        source["feature"] = []
+    if source["duty_values"]:
+        source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
+    else:
+        source["duty_values"] = []
+
+    if source["actions"]:
+        source["actions"] = [i for i in source["actions"].split("\r\n")]
+    else:
+        source["actions"] = []
+    return source
 
 def _render_hits(results):
     # We really want everyting on newlines
     ret = []
-    for hits in results["hits"]["hits"]:
-        source = hits["_source"]
-        source["id"] = hits["_id"]
-        source["type"] = hits["_type"]
-        if source["logic"]:
-            source["logic"] = [i for i in source["logic"].split("\r\n")] 
-        else:
-            source["logic"] = []
-        if source["feature"]:
-            source["feature"] = [i for i in source["feature"].split("\r\n")] 
-        else:
-            source["feature"] = []
-        if source["duty_values"]:
-            source["duty_values"] = [i for i in source["duty_values"].split("\r\n")]
-        else:
-            source["duty_values"] = []
-
-        if source["actions"]:
-            source["actions"] = [i for i in source["actions"].split("\r\n")]
-        else:
-            source["actions"] = []
+    for hits in results:
+        source = _format_hit(hits)
         ret.append(source)
     return ret
 
@@ -81,15 +86,42 @@ def articles_search():
                     }
                 }
             })
-    results = _render_hits(e)
+    results = _render_hits(e["hits"]["hits"])
     return render_template('search_results.html', results=results)
 
 
 @app.route("/articles/all")
 def articles_all():
     e = es.search(index="dilemma", doc_type="articles", body={"query": {"match_all": {}}})
-    results = _render_hits(e)
+    results = _render_hits(e["hits"]["hits"])
     return render_template('search_results.html', results=results)
+
+def json_response(func):
+    from functools import wraps
+
+    @wraps(func)
+    def wrapped(*args, **kwargs):
+        response = func(*args, **kwargs)
+        dump = json.dumps(response, indent=2, sort_keys=False)
+        return dump, 200, {'Content-Type': 'application/json; charset=utf-8'}
+    return wrapped
+
+@app.route("/articles/all/json")
+@json_response
+def articles_all_json():
+    e = es.search(index="dilemma", doc_type="articles", body={"query": {"match_all": {}}})
+    results = _render_hits(e["hits"]["hits"])
+    json = []
+    for result in results:
+        json.append(OrderedDict(sorted(result.items(), key=lambda t: t[0])))
+    return json
+
+@app.route("/article/<id>/json")
+@json_response
+def article_json(id):
+    e = es.get(index="dilemma", doc_type="articles", id=id)
+    results = _format_hit(e)
+    return [results]
 
 @app.route("/articles/edit/<id>", methods=["GET","POST"])
 def articles_edit(id):
