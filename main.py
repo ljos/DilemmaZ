@@ -150,7 +150,7 @@ def articles_edit(id):
     results["dilemma_body"] = request.form.get("dilemma_body")
     results["article_url"] = request.form.get("article_url") 
     results["logic"] = request.form.get("logic")
-    results["feature"] = request.form.get("features")
+    results["feature"] = request.form.get("feature")
     results["actions"] = request.form.get("actions")
     results["case"] = request.form.get("case")
     results["duty_values"] = request.form.get("duty_values")
