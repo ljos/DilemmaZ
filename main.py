@@ -92,7 +92,7 @@ def articles_search():
 
 @app.route("/articles/all")
 def articles_all():
-    e = es.search(index="dilemma", doc_type="articles", body={"query": {"match_all": {}}})
+    e = es.search(index="dilemma", doc_type="articles", size=100, body={"query": {"match_all": {}}})
     results = _render_hits(e["hits"]["hits"])
     return render_template('search_results.html', results=results)
 
@@ -109,7 +109,8 @@ def json_response(func):
 @app.route("/articles/all/json")
 @json_response
 def articles_all_json():
-    e = es.search(index="dilemma", doc_type="articles", body={"query": {"match_all": {}}})
+    e = es.search(index="dilemma", doc_type="articles", size=100,
+                body={"query": {"match_all": {}}})
     results = _render_hits(e["hits"]["hits"])
     json = []
     for result in results:
@@ -164,6 +165,10 @@ def articles_delete(id):
     es.delete(index='dilemma', doc_type='articles', id=id)
     flash("Deleted article", "success")
     return redirect(url_for('index'))
+
+@app.route("/guidelines")
+def guidelines():
+    return render_template('guidelines.html')
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)

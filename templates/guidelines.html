@@ -1,0 +1,38 @@
+{%- extends "base.html" -%}
+{% block content %}
+<div class="col-lg-9 col-md-offset-3">
+  <div class="well bs-component">
+      Guidelines
+
+      <p>About the page:<br>
+      This page is created as a component of a course given by the University of Bergen. It is a collection of ethical
+      dilemmas mainly created to improve the research on machine ethics. The collection of these dilemmas is not
+      complete with all existing dilemmas but contains what we have managed to find. We have therefore not only created
+      this page to display dilemmas but also so that dilemmas could be added.</p>
+
+      <p>The dilemmas in the database is stored in three different formats. Natural Language, Prolog Syntax and as Prima
+      facie duty-value tuples. The reason for storing them as Prima Facie Duty-value tuples is so that the dilemmas
+      could easily be implemented in a bottom-up approach. The reason to have the dilemmas in Prolog Syntax, is so that
+      they easily could be implemented in a top-down approach.</p>
+
+      <p>How to use it<br>
+      To use this database, you can either search for a specific dilemma on the search bar on top, or scroll through the
+      collection. If you find a specific dilemma, you can extract it by either copying the text or click on the export
+      button. When clicking on the “export” button the selected dilemma would appear in a JSON-syntax ready be
+      exported.</p>
+
+
+      <p>How to add or do changes to dilemmas<br>
+      If you have an ethical dilemma that you want to add to the collection you can click on the “Add Article” button on
+      the left menu. Then a schema appears that needs to be filled in to the best of your knowledge.</p>
+
+      <p>NOTE: Before you begin adding the dilemma, please make sure that you understand how to represent it in both Prolog
+      Syntax and as Duty Values. The program currently does not have any proof reader implemented to validate if the
+      logic or value set is correctly written. So please be gentle with your implementation.</p>
+
+      <p>If you want to change a dilemma, you can do this by pressing the “edit” button under the article. Then a filled
+      schema appears and you can do the changes you seem necessary.</p>
+  </div>
+</div>
+
+{%- endblock %}
