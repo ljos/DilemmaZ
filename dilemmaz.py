@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 from elasticsearch import Elasticsearch
 from forms.article import Article
 
-es = Elasticsearch([{'host': 'velox.vulpes.pw', 'port': 9200}])
+es = Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])
 app = Flask(__name__)
 app.config['WTF_CSRF_ENABLED'] = False
 app.secret_key="LOLKEKSECURE"

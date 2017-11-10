@@ -25,15 +25,15 @@
 {{ line|safe}}</br>
 {% endfor %}
 
-<a href="/articles/edit/{{item.id}}"> Edit </a><br>
-<a href="/article/{{item.id}}/json"> Export </a>
+<a href="{{ url_for('articles_edit', id=item.id) }}"> Edit </a><br>
+<a href="{{ url_for('article_json', id=item.id) }}"> Export </a>
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-<a href="/articles/delete/{{item.id}}"> Delete </a>
+<a href="{{ url_for('articles_delete', id=item.id) }}"> Delete </a>
 <br>
 {% endif %}
                       </div>

@@ -2,7 +2,7 @@
 {% block content %}
                   <div class="col-lg-6">
                       <div class="well bs-component">
-                          <form class="form-horizontal" role="index" action="/articles/index" method=post>
+                          <form class="form-horizontal" role="index" action="{{ url_for('articles_index') }}" method=post>
                               <fieldset>
                                   <legend>
                                       Index new article

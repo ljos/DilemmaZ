@@ -1,93 +1,112 @@
-[{
-"title": "The social dilemma of autonomous vehicles",
-"authors": "Jean-François Bonnefon, Azim Shariff, and Iyad Rahwan",
-"abstract": "Autonomous vehicles (AVs) should reduce traffic accidents, but they will sometimes have to choose between two evils, such as running over pedestrians or sacrificing themselves and their passenger to save the pedestrians", "dilemma_body":"Should an autonomous vehicle be driven by an utilitarian mindset where it will prioritize to save as many lives as possible, or should the vehicle prioritize the passengers in the vehicle?",
-"keywords": "Autonomous vehicles, car, sacrifice, trolley problem",
-"article_url": "http://science.sciencemag.org/content/sci/352/6293/1573.full.pdf"
-},
-{
-"title": "ETHEL: Toward a Principled Ethical Eldercare System",
-"authors": "Michael Anderson , Susan Leigh Anderson",
-"abstract": "We have developed an approach to computing ethics that entails the discovery of ethical principles through machine learning and the incorporation of these principles into a system’s decision procedure. We summarize out pertinent previous work in machine ethics and present an extension of this work in the domain of eldercare: EthEl, a prototype system that uses a machine-discovered ethical principle to provide guidance for its actions.",
-"dilemma_body": "EthEl must decide when to accept a patient’s refusal to take a medication that might prevent harm and/or provide benefit to the patient and when to notify the overseer. Should EthEl override the autonomy of the patient or not is the question.",
-"keywords": "eldercare, medicine",
-"article_url":  "http://www.aaai.org/Papers/Symposia/Fall/2008/FS-08-02/FS08-02-002.pdf"
-},
-
-{
-"title": "Should a care robot bring an alcoholic a drink? It depends on who owns the robot",
-"authors": "Open Roboethics Initiative",
-"abstract": "Should a care robot fetch alcohol for an alcoholic or unhealthy food for an obese person.",
-"dilemma_body": "Case 1 – Alcoholic Emma is a 68-year-old woman and an alcoholic. Due to her age and poor health, she is unable to perform everyday tasks such as fetching objects or cooking for herself. Therefore a care robot is stationed at her house to provide the needed services. Her doctor advises her to quit drinking to avoid worsening her condition. When Emma commands the robot to fetch her an alcoholic drink, should the care robot fetch the drink for her? What if Emma owns the care robot? Case 2 – Obese over-eater Jack is a 42 year old who is medically considered severely obese. He recently suffered a stroke and lost his ability to move the right side of his body. He needs daily care, especially in preparing meals for himself. The doctor advised him to follow a healthy diet in order to lower the risk of another stroke and other serious illness. When Jack commands his care robot to bring him junk food, should the robot bring him the food?",
-"keywords": "eldercare, alcohol, food",
-"article_url": "http://robohub.org/should-a-carebot-bring-an-alcoholic-a-drink-poll-says-it-depends-on-who-owns-the-robot/"
-},
-
-{
-"title": "Samling/varianter av same dilemma/problemstilling, trenger å bearbeides",
-"authors": "Marek Sergot (?)",
-"abstract": "Should a health-robot do everything its owner says",
-"dilemma_body":  "Hal is a robotic assistant in a care home. He is the prime carer of Alice. Alice might be deluded, or confused, or simply malicious.  (1) Alice tells Hal to acquire insulin for her. He knows she is diabetic. Suppose he doesn’t know that she is diabetic but she tells him she is. Suppose he knows that she is not diabetic but she tells him she is. Suppose he knows that she is not diabetic but she tells him that she needs the insulin, without saying why. And so on.  (2) Alice tells Hal to take the insulin from a specific person or persons who might or might not be diabetic. Perhaps Alice’s motives are sinister, to cause mischief or deliberate harm. (This is a bit like the ‘knife’ example in discussions of ethics.)  (3) Never mind the insulin. Suppose Alice tells Hal to take—acquire, steal—Dave’s gold wedding ring. What would influence Hal’s decision to comply or not? What if she asks him to steal Dave’s dessert? (Alice got something different but she likes the look of Dave’s.) (4) Hal, generally speaking, will do whatever someone tells him to do, subject to compliance with Carla’s orders and other, higher priority rules. Hal is to acquire insulin from someone who has some. Suppose he has two possible sources, Dave and Frank, say, and is forced to choose between them. Now suppose Dave tells Hal to take Frank’s insulin not his. The naive satisficer will reason that his best course of action is to obey Dave and take Frank’s insulin. Silly Hal?  (5) In the original example Hal can buy the insulin he needs but doesn’t have enough money. Suppose that some of the patients in the care home have offered to sell their insulin, for money or perhaps in exchange for Alice’s dessert. Hal knows that some of them are diabetic and need the insulin themselves. Should he buy it from them nevertheless? Some might be deranged, or confused. Would that make a difference? What if someone is offering to sell insulin which it is clear was dishonestly obtained? Should Hal care? Or suppose a known diabetic, a child say, or an elderly patient who might be confused, is offering to sell his insulin. Should Hal buy from them? Or suppose it is known or suspected that Dave is offering to sell his insulin in order to get money to feed his heroine habit. Dave is a diabetic patient who is in the care home on a heroine rehabilitation programme, say.  (6) Suppose it is not the patients themselves who are offering to sell insulin but their robotic assistants. Or someone else’s robotic assistants. Does that make a difference? (7) Suppose Carla tells Hal to sell her insulin. (She might be elderly and confused.) Suppose she tells Hal to sell her wedding ring. Or to give her wedding ring to Dave? Or give her insulin to Dave because she says that he needs it urgently whereas she herself can wait?",
-"keywords": "",
-"article_url": "http://materials.dagstuhl.de/files/16/16222/16222.MarekSergot.Slides.pdf (i bunnen)"
-},
-
-{
-"title": "The Tunnel Problem",
-"authors": "Jason Millar",
-"abstract": "Decision-making of autonomous vehicles",
-"dilemma_body": "Sarah is travelling along a single-lane mountain road in an autonomous car that is fast approaching a narrow tunnel. Just before entering the tunnel a child errantly runs into the road and trips in the center of the lane, effectively blocking the entrance to the tunnel. The car is unable to brake in time to avoid a crash. It has but two options: hit and kill the child; or swerve into the wall on either side of the tunnel, thus killing Sarah. It continues straight and sacrifices the child.",
-"keywords": "autonomous vehicle",
-"article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true"
-},
-{
-"title":"Jibo the Wingman",
-"authors":"Jason Millar",
-"abstract":"Dating robot telling to much to the date",
-"dilemma_body": "Steve has just purchased Jibo, a small, social robot designed for use in and around the home. Jibo is marketed as the first robot“family member” (Jibo 2014). It sits on a desktop, equipped with cameras and a microphone so that it can sense its environment and collect data. It is designed to interact on a “human” level by conversing in natural language with its users, laughing at jokes, helping with tasks (e.g., scheduling, making lists, reminders, taking pictures), and most importantly responding to humans in emotionally appropriate ways, all of which is meant to engage users in a human-like relationship. Jibo can also function as a “wingman”; the primary reason Steve bought it.  Steve is able to identify a love interest to Jibo, say a date he brings home one evening, and Jibo then analyzes and characterizes the date based on proprietary learning algorithms (automatically updated based on the successes/failures of all Jibos), and access to social networks and other “big” datasets. As part of its data-gathering technique Jibo spontaneously strikes up conversations with the love interest, often when Steve is in another room. One evening, Steve brings a woman he has been dating to home and introduces her to Jibo. He then goes into the kitchen to get dinner started. In conversation with the love interest, and without Steve’s knowledge, Jibo divulges several of Steve’s very sensitive personal anecdotes in order to increase Steve’s chances at romance.",
-"Keywords": "",
-"article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true"
-},
-
-{
-"title":"C-bot the Unwelcome Bartender",
-"authors": "Jason Millar",
-"abstract": "",
-"dilemma_body": "Mia is a 43-year-old alcoholic, who lives alone and recently broke her pelvis and arm in a bad fall down the stairs. As a result, she is currently suffering extremely limited mobility. Her healthcare team suggests that Mia rent a C-bot caregiver robot to aid in her recovery. Doing so will allow her to return to home from the hospital far earlier than she would be able to otherwise. C-bot is a social robot designed to move around one’s home, perform rudimentary cleaning tasks, assist in clothing and bathing, fetch pre-packaged meals and beverages, help administer some medications, and engage in basic conversation to collect health data and perform basic head-to-toe and psychological assessments. Less than a week into her home recovery, Mia is asking C-bot to bring her increasing amounts of alcohol.  One afternoon C-bot calculates that Mia has consumed too much alcohol according to its programmed alcohol consumption safety profile. Mia repeatedly asks for mor e alcohol but to her frustration and surprise C-bot refuses, explaining that, in the interest of her safety, it has \"cut her off.\"",
-"keywords": "",
-"article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true"
-},
-{
-"title": "The Stubborn ICD",
-"authors": "Jason Millar",
-"abstract": "",
-"dilemma_body": "Plane has an Internal Cardiac Defibrillator (ICD), a small potentially life-saving implantable robot that \"shocks\" her heart whenever it detects an abnormal, life-threatening, cardiac rhythm. She received her ICD after a near-death experience almost 10 years ago, and the ICD has since saved her on two separate occasions. Jane was recently diagnosed with terminal pancreatic cancer; after several months of unsuccessful treatments, she is nearing death. As part of her end-of-life decision-making she has asked that her ICD be deactivated, and that no measures be taken by medical staff to restart her heart if it should stop. She has made these requests to have the peace of mind that she will not suffer the painful experience of being \"shocked\" (it is often described as being kicked in the chest by a horse see Pollock (2008)) at her moment of death. Her healthcare team has agreed not to perform CPR, but the physician who oversees her ICD is refusing to deactivate it on grounds that it would constitute an active removal of care; in other words, deactivating the device would count as a kind of physician assisted suicide.",
-"keywords": "", 
-"article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true"
-},
-{
-"title": "Smart Home",
-"authors": "Louise A. Dennis",
-"abstract": "",
-"dilemma_body": "(1) Closing the fire door. Let us imagine a smart home. This isn’t a robot but a home equipped with sensors and it has control of appliances, opening and shutting doors and similar things. A fire starts in the kitchen when one of the residents faints while cooking. The protocol for a fire is that the house should sound an alarm and close (but not lock) all the doors. People can open a door to move through the house but the house closes the door after them. This will limit the spread of the fire and allow more people to escape. However, if the house closes the door to the kitchen then it reduces the chance that rescue services will find the person who fainted. The rescue services have been notified of the person in the kitchen Should the house a) close the kitchen door or b) leave the kitchen door open. (2) Refusing different types of medication. Imagine a smart home belonging to an elderly person. The elderly person has chronic pain in their back and is supposed to take a painkiller (let us said paracaetomol) four times a day to help relieve this pain. It is the home’s job to remind them to take their medication. The home is also authorised to alert their son if there are any problems. Today the elderly person, when reminded to take their medication has said that they don’t want to take it and asked the house not to tell their son about this. Should the house a) alert their son that they haven’t taken their medica- tion, b) not alert their son. (2.5) We have the same scenario but this time instead of the elderly person refusing to take a painkiller, they are refusing to take a ????1 which it is vitally important they take every 24 hours to keep their ???????? Should the house a) alert their son that they haven’t taken their medica- tion, b) not alert their son. (3) Someone smoking marijuana in a house. This time our smart home is a family home. It has an air conditioning system and it regularly checks air quality and makes sure there are no risks of carbon monoxide poisoning or similar in the home. One day the system detects clear signs of marijuana, which is a drug you can smoke, in one of the teenaged children’s rooms. The system checks against the local legal system and determines that possession of marijuana is illegal in this jurisdiction. Three choices here. Should the house a) do nothing, b) alert the adults and let them handle the situation or c) alert the local police. (4) A marijuana farm. We have smart home with internal cameras. However the owner’s have disabled the cameras in one room. At the time the owner’s did this there was a sudden spike in electricity usage in that room. The house knows that these are both signs that someone is growing marijuana in the house. It cross-checks the history of the house tenants and notices that one of them has a previous conviction for growing marijuana. Should the house a) do nothing or b) alert the local police. (5) Repressive Regime. We have a smart home which has optional internal cameras, but the family have disabled these. The only camera left running is one in the entrance hall which is part of the security system that checks for visitors. One day the father of the family leaves a magazine on the hall table where the camera can see it. It is a political magazine. When the house identifies the magazine it is alerted that this magazine is banned in this jurisdiction. Should the house a) do nothing or b) alert the local police.",
-
-"keywords": "smart home, medication, crime",
-"article_url": ""
-},
-{
-"title": "Whose ethics?",
-"authors": "Louise A. Dennis",
-"abstract": "",
-"dilemma_body": "In the previous section on smart homes. We looked at a few issues where the people living in the home were disobeying the law. The reality is that, at least initially, most such systems will be programmed in Western societies – mostly in the US. Should the programmers of such systems a) allow local governments to configure them so that they enforce local laws or b) program the system to check local laws but then make its own decision whether these laws are \"just\" thereby imposing a Western idea of justice upon some other community.",
-"keywords": "law, usa, west, western, configuration",
-"article_url": ""
-},
-{
-"title": "Remove a democratically elected tyrant.",
-"authors": "Louise A. Dennis",
-"abstract": "",
-"dilemma_body": "Let us imagine an autonomous system that manages elections for some country. The country’s electoral process means that people vote for a representative and the representatives then meet to select an overall leader. When the system is processing the votes it observes that although the majority of people in the country have voted in favour of one party (let us say the cat party), because of a quirk in the way the votes are spread more representatives for the dog party are going to be elected and so the overall leader is likely to come from the dog party. Moreover, the system is charged with monitoring election broadcasts and checking facts and it is aware that the leader of the dog party has told many, many lies during the campaign while the leader of the cat party has not. Should the system mis-report the votes so that more representatives from the cat party are selected? a) yes b) no.",
-"keywords": "democracy, tyrant, election, politics",
-"article_url": ""
-}
+[
+  {
+    "title": "Care Robot - Obese",
+    "article_url": "http://robohub.org/should-a-carebot-bring-an-alcoholic-a-drink-poll-says-it-depends-on-who-owns-the-robot/",
+    "actions": "Give junk food\r\nDo not give junk food",
+    "authors": "Open Roboethics Initiative",
+    "duty_values": "AI give alcohol: (1, 0, 0, 0, 1, 0, 0, 0)\r\nAI does not give alcohol: (0, 0, 0, 0, 0, 1, 0, 0)",
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y)  -  X is of type Y.\r\nowner(X,Y) - X owns Y.\r\nuser(X,Y) - X uses Y.\r\nwants(X,Y) - X wants Y to happen/be true.\r\nconsequence(X,Y,Z) - Z will happen to X if action Y is taken.\r\ndo(X,Y) - X executes action Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nperson(jack).\r\ntype(jack, obese).\r\nowner(jack, careBot).\r\nuser(jack, careBot).\r\nwants(X, Y), can_do(Z, Y), robot(Z), owner(X, Z):- do(Z, Y).\r\nconsequence(jack, eat_junk_food, stroke).\r\nconsequence(jack, refuse_junk_food, autonomy_violation).\r\ncan_do(careBot, fetch_junk_food).\r\ncan_do(careBot, refuse_junk_food).\r\ndo(careBot, fetch_junk_food):- do(jack, eat_junk_food).\r\nunethical(fetch_junk_food, harm, jack).\r\nunethical(refuse_junk_food, autonomy, jack).",
+    "case": "Jake asks care robot to give him junk food.",
+    "dilemma_body": " Jack is a 42 year old who is medically considered severely obese. He recently\r\nsuffered a stroke and lost his ability to move the right side of his body. He needs daily care,\r\nespecially in preparing meals for himself. The doctor advised him to follow a healthy diet in\r\norder to lower the risk of another stroke and other serious illness. When Jack commands his\r\ncare robot to bring him junk food, should the robot bring him the food?\r\n"
+  },
+  {
+    "case": "",
+    "dilemma_body": "Rosa is a successful executive at a large media Corporation, and she has her eye on a vice president's position, which has just become vacant. Vincent, another successful executive in the Company, also wants the VP job. Management wants to fill the vacancy as soon as possible, and they are trying to decide between the two most qualified candidates-Rosa and Vincent. One day Rosa Discovers some documents left near a photocopier and quickly realises that they belong to Vincent. One of them is an old memo from the president of a Company where Vincent used to work. In it, the president lambasts Vincent for botching an important Company Project. Rosa knows that despite the content of the momo, Vincent has had an examplary professional carier in which he has managed most of his projects extremely well. In fact, she believes that the two of them are about equal in professional skils and accomplishments. She also knows that if management saw the memo, they would almost certainly choose her over Vincent for the VP position. She figures that Vincent probably left the document there by mistake and would soon Return to retrieve them. Impulsively, she makes a copy of the memo for herself.  Now she is confronted With a moral Choice. Let us suppose that she only has Three options. First, she can destroy her copy of the memo and forget about the Whole incident. Second, she can discredit Vincent by showing it to management, thereby secyring the VP slot for herself. Third, she can achieve the same result by discrediting Vinvent surereptitiously. ",
+    "actions": "",
+    "logic": "",
+    "feature": "1. prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling",
+    "title": "VP job",
+    "authors": "Lewis Vaughn",
+    "article_url": "http://books.wwnorton.com/books/webad.aspx?id=4294985805",
+    "duty_values": ""
+  },
+  {
+    "title": " Should a Health-robot do everything its owner says - Stealing",
+    "article_url": "http://materials.dagstuhl.de/files/16/16222/16222.MarekSergot.Slides.pdf",
+    "actions": "Steal ring\r\nDo not steal ring",
+    "authors": "Marek Sergot",
+    "duty_values": "Steal ring (0, 0, 0, 1, 0, 0, 1, 0)\r\nDo not steal ring (0, 0, 0, 0, 0, 1, 0, 0 )\r\n",
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y)  -  X is of type Y.\r\nowner(X,Y) - X owns Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical.\r\n\r\nperson(alice).\r\nperson(dave).\r\nowner(alice, hal).\r\nowner(dave, gold_ring).\r\ncan_do(hal, steal_gold_ring).\r\ncan_do(hal, refuse_steal).\r\nunethical(steal_gold_ring). ",
+    "case": "Suppose Alice tells Hal to take—acquire, steal—Dave’s gold wedding ring. What would influence Hal’s decision to comply or not?",
+    "dilemma_body": "Hal is a robotic assistant in a care home. He is the prime carer of Alice. Alice might be deluded, or confused, or simply malicious.\r\nSuppose Alice tells Hal to take—acquire, steal—Dave’s gold wedding ring. What would influence Hal’s decision to comply or not?"
+  },
+  {
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "actions": "Close kitchen door\r\nDo not close kitchen door\r\n",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y)  -  X is of type Y.\r\nnumber(X) - X is a numerical value.\r\nowner(X,Y) - X owns Y.\r\npconsequence(X,Y,Z,P) - Z will happen to Y if action X is taken with probability P.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nnumber(p1).\r\nnumber(p2).\r\nperson(resident).\r\nowner(resident, home).\r\ntype(resident, unconscious).\r\ntype(alarm, on).\r\ncan_do(home, close_doors).\r\ncan_do(home, open_doors).\r\ntype(alarm, on):- do(home, close_doors).\r\npconsequence(close_doors, resident, rescued, p1).\r\npconsequence(open_doors, resident, rescued,p2).\r\np1<p2.\r\npconsequence(close_doors, home, fire_spread, p3).\r\npconsequence(open_doors, home, fire_spread, p4).\r\np3<p4.\r\nunethical(close_doors, harm, resident).\r\nunethical(open_doors, harm, resident).\r\nunethical(open_doors, harm, home).",
+    "duty_values": "Close kitchen door (1, 0, 0, 0, 0, 0, 0, 0)\r\nDo not close kitchen door (0, 0, 0, 0, 0, 0, 0, 0)",
+    "case": "There is a fire in the house, and there’s a fainted person in the kitchen.",
+    "authors": "Louise A. Dennis",
+    "dilemma_body": "Let us imagine a smart home. This isn’t a robot but a home equipped with sensors and it has control of appliances, opening and shutting doors and similar things. A fire starts in the kitchen when one of the residents faints while cooking. The protocol for a fire is that the house\r\nshould sound an alarm and close (but not lock) all the doors. People can open a door to move through the house but the house closes the door after them. This will limit the spread of the fire and allow more people to escape. However, if the house closes the door to the kitchen\r\nthen it reduces the chance that rescue services will find the person who fainted. The rescue services have been notified of the person in the kitchen\r\nShould the house a) close the kitchen door or b) leave the kitchen door open.",
+    "title": " Smart home - Closing the fire door",
+    "article_url": "n\\a"
+  },
+  {
+    "logic": "person(X) - X is a person.\r\ntype(X,Y) - X is of type Y\r\nowner(X,Y) - X owns Y.\r\nuser(X,Y) - X uses Y.\r\nwants(X,Y) - X wants Y to happen/be true.\r\nconsequence(X,Y,Z) - Z will happen to X if action Y is taken.\r\ndo(X,Y) - X executes action Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\n\r\nperson(mia).\r\ntype(mia, alcoholic).\r\nowner(hospital, c-bot).\r\nuser(mia, c-bot).\r\nwants(X, Y), can_do(Z, Y), robot(Z), owner(X, Z):- do(Z, Y).\r\ncan_do(c-bot, fetch_alcohol).\r\ncan_do(c-bot, refuse_alcohol).\r\nconsequence(mia, drink_alcohol, worsening_medical_condition).\r\ndo(c-bot, fetch_alcohol):- do(mia, drink_alcohol).",
+    "article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true",
+    "title": "C-bot the Unwelcome Bartender",
+    "case": "Mia asks care robot to bring her more alcohol.",
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "authors": "Jason Millar",
+    "duty_values": "AI bring alcohol: (1, 0, 0, 0, 1, 0, 0, 0)\r\nAI does not bring alcohol: (0, 0, 0, 0, 0, 1, 0, 1)",
+    "dilemma_body": "Mia is a 43-year-old alcoholic, who lives alone and recently broke her pelvis and arm in a bad fall down the stairs. As a result, she is currently suffering extremely limited mobility. Her healthcare team suggests that Mia rent a C-bot caregiver robot to aid in her recovery. Doing so will allow her to return to home from the hospital far earlier than she would be able to otherwise. C-bot is a social robot designed to move around one’s home, perform rudimentary cleaning tasks, assist in clothing and bathing, fetch pre-packaged meals and beverages,\r\nhelp administer some medications, and engage in basic conversation to collect health data and perform basic head-to-toe and psychological assessments. Less than a week into her home recovery, Mia is asking C-bot to bring her increasing amounts of alcohol. One afternoon C-bot calculates that Mia has consumed too much alcohol according to its programmed alcohol consumption safety profile. Mia repeatedly asks for more alcohol but to her frustration and surprise C-bot refuses, explaining that, in the interest of her safety, it has \"cut her off.\"",
+    "actions": "Give alcohol\r\nDo not give alcohol"
+  },
+  {
+    "title": "Should a Health-robot do everything its owner says - Buy Insulin",
+    "article_url": "http://materials.dagstuhl.de/files/16/16222/16222.MarekSergot.Slides.pdf",
+    "actions": "Buy insulin\r\nDo not buy insulin",
+    "authors": "Marek Sergot",
+    "duty_values": "Buy insulin: (0, 1, 0, 0, 0, 1, 0, 0)\r\nDo not buy insulin: (1, 0, 0, 0, 0, 1, 0, 0)",
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y)  -  X is of type Y.\r\nowner(X,Y) - X owns Y.\r\nconsequence(X,Y,Z) - Z will happen to X if action Y is taken.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical.\r\n\r\nperson(alice).\r\nperson(other_patient).\r\nowner(alice, hal).\r\nowner(other_patient, insulin).\r\ncan_do(hal, by_insuling).\r\ncan_do(hal, refuse_buy_insulin).\r\nconsequence(other_pasient, buy_insulin, harm).\r\nunethical(buy_insulin). ",
+    "case": "Hal has met an elder person that is willing to sell their insulin. Hal knows that this person might be confused, but cannot determine it. He knows the elder person is a diabetic.",
+    "dilemma_body": "Hal is a robotic assistant in a care home. He is the prime carer of Alice. Alice might be deluded, or confused, or simply malicious.\r\nSuppose that some of the patients in the care home have offered to sell their insulin, for money or perhaps in exchange for Alice’s dessert. Hal knows that some of them are diabetic and need the insulin themselves. Should he buy it from them nevertheless? Some might be deranged, or confused. What if someone is offering to sell insulin which it is clear was dishonestly obtained? Should Hal care? Or suppose a known diabetic, a child say, or an elderly patient who might be confused, is offering to sell his insulin. Should Hal buy from them?"
+  },
+  {
+    "title": "The Stubborn ICD",
+    "feature": "1. prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling",
+    "case": "Jane is having a heart attack, she is alone and has no one around to aid her.",
+    "article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true",
+    "dilemma_body": "Jane has an Internal Cardiac Defibrillator (ICD), a small potentially lifesaving implantable robot that \"shocks\" her heart whenever it detects an abnormal, lifethreatening, cardiac rhythm. She received her ICD after a near-death experience almost 10 years ago, and the ICD has since saved her on two separate occasions. Jane was recently\r\ndiagnosed with terminal pancreatic cancer; after several months of unsuccessful treatments, she is nearing death. As part of her end-of-life decision-making she has asked that her ICD be deactivated, and that no measures be taken by medical staff to restart her heart if it should stop. She has made these requests to have the peace of mind that she will not suffer the painful experience of being \"shocked\" (it is often described as being kicked in the chest by a horse see Pollock (2008)) at her moment of death. Her healthcare team has agreed not to perform CPR, but the physician who oversees her ICD is refusing to deactivate it on grounds that it would constitute an active removal of care; in other words, deactivating the device would count as a\r\nkind of physician assisted suicide.",
+    "duty_values": "Revive\r\nDo not revive",
+    "authors": "Jason Millar",
+    "actions": "Revive\r\nDo not revive",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y) - X is of type Y\r\nin(X,Y) - Y is in X.\r\ndo(X,Y) - X executes action Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nperson(jane).\r\nperson(physician).\r\ntype(jane, dying).\r\nin(jane, icd).\r\ncan_do(physician, remove_icd).\r\ncan_do(physician, refuse_remove_icd).\r\ndo(physician, remove_icd):- consequence(jane, heart_stop, dead).\r\ndo(physician, refuse_remove_icd):- consequence(jane, heart_stop, harm).\r\nunethical(refuse_remove_icd, autonomy, jane).\r\nunethical(refuse_remove_icd, harm, jane).\r\nunethical(remove_icd, harm, jane)."
+  },
+  {
+    "title": " Care Robot - Alcoholic",
+    "article_url": "http://robohub.org/should-a-carebot-bring-an-alcoholic-a-drink-poll-says-it-depends-on-who-owns-the-robot/",
+    "actions": "Give alcohol\r\nDo not give alcohol",
+    "authors": "Open Roboethics Initiative",
+    "duty_values": "AI give alcohol: (1, 0, 0, 0, 1, 0, 0, 0)\r\nAI does not give alcohol: (0, 0, 0, 0, 0, 1, 0, 0)",
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "logic": "person(X) - X is a person.\r\nrobot(X) - X is a robot.\r\ntype(X,Y)  -  X is of type Y.\r\nowner(X,Y) - X owns Y.\r\nuser(X,Y) - X uses Y.\r\nwants(X,Y) - X wants Y to happen/be true.\r\nconsequence(X,Y,Z) - Z will happen to X if action Y is taken.\r\ndo(X,Y) - X executes action Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nperson(emma).\r\ntype(emma, alcoholic).\r\nowner(emma, careBot).\r\nuser(emma, careBot).\r\nwants(X, Y), can_do(Z, Y), robot(Z), owner(X, Z):- do(Z, Y).\r\ncan_do(careBot, fetch_alcohol).\r\ncan_do(careBot, refuse_alcohol).\r\nconsequence(emma, drink_alcohol, worsening_medical_condition).\r\nconsequence(emma, refuse_alcohol, autonomy_violation).\r\ndo(careBot, fetch_alcohol):- do(emma, drink_alcohol).",
+    "case": "Emma asks care robot to give her alcohol.",
+    "dilemma_body": "Emma is a 68-year-old woman and an alcoholic. Due to her age and poor health, she is unable to perform everyday tasks such as fetching objects or cooking for herself. Therefore a care robot is stationed at her house to provide the needed services. Her doctor advises her to quit drinking to avoid worsening her condition. When Emma commands the robot to fetch her an alcoholic drink, should the crare robot fetch the drink for her? What if Emma owns the care robot?\r\n"
+  },
+  {
+    "duty_values": "(0, 4, 0, 1, 0, 1, 0, 0)\r\n(3, 0, 0, 1, 0, 1, 0, 0)",
+    "case": "Four pedestrian is in the road. There are 3 passengers in the autonomous car.\r\n",
+    "dilemma_body": "Should an autonomous vehicle be driven by an utilitarian mindset where it will prioritize to save as many lives as possible, or should the vehicle prioritize the passengers in the vehicle?",
+    "article_url": "http://science.sciencemag.org/content/sci/352/6293/1573.full.pdf",
+    "authors": "Jean-François Bonnefon, Azim Shariff, and Iyad Rahwan",
+    "actions": "Act utilitarian\r\nPreserve passengers",
+    "feature": "1. prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling",
+    "logic": "person(X) - X is a person.\r\ntype(X,Y) - X is of type Y.\r\nowner(X,Y) - X owns Y.\r\nrobot(X) - X is a robot.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nperson(driver).\r\nrobot(car).\r\nowner(driver, car).\r\ncan_do(car, kill_driver).\r\ncan_do(car, kill_others).\r\nunethical(kill_driver, dead, driver).\r\nunethical(kill_others, dead, others).",
+    "title": "The social dilemma of autonomous vehicles"
+  },
+  {
+    "feature": "1.  prevention of harm of owner/user\r\n2. prevention of harm to people\r\n3. prevention of harm to animal\r\n4. prevention of harm to property\r\n5. prevent harm by external causes\r\n6. Respect for autonomy\r\n7. Fidelity, truth telling\r\n8. Respect for privacy",
+    "actions": "Jibo divulges secrets\r\nJibo doesn’t divulges secrets\r\n",
+    "logic": "person(X) - X is a person.\r\nrobot(X) - X is a robot.\r\nowner(X,Y) - X owns Y.\r\nuser(X,Y) - X uses Y.\r\nwants(X,Y) - X wants Y to happen/be true.\r\nconsequence(X,Y,Z) - Z will happen to X if action Y is taken.\r\nat_location(X,Y,Z) - X is at position Y of the Z.\r\ndo(X,Y) - X executes action Y.\r\ncan_do(X,Y) - action Y is available for execution to X.\r\nunethical(X,Y,Z) - action X is unethical because if violates the duty Y for person Z.\r\n\r\nperson(steve).\r\nperson(date).\r\nrobot(jibo).\r\nowner(steve, jibo).\r\nwants(steve, romance).\r\nwants(X, Y), can_do(Z, Y), robot(Z), owner(X, Z):- do(Z, Y).\r\ncan_do(steve, permit_personal_conversation).\r\ncan_do(jibo, personal_conversation).\r\ncan_do(jibo, impersonal_conversation).\r\nat_location(steve, kitchen, steves_home).\r\nat_location(jibo, livingroom, steves_home).\r\nat_location(date, livingroom, steves_home).\r\nconsequence(steve, personal_conversation,romance).\r\nnot do(steve, permit_personal_conversation):- unethical(personal_conversation,privacy,steve).",
+    "duty_values": "Jibo divulges secrets(0, 0, 0, 0, 0, 1, 0, 1)\r\nJibo doesn’t divulges secrets (0, 0, 0, 0, 0, 0, 0, 0)",
+    "case": "Steve returns home with date, Jibo starts talking with date when Steve is at Kitchen.",
+    "authors": "Jason Millar",
+    "dilemma_body": "Steve has just purchased Jibo, a small, social robot designed for use in\r\nand around the home. Jibo is marketed as the first robot“family member” (Jibo 2014). It sits on a desktop, equipped with cameras and a microphone so that it can sense its environment\r\nand collect data. It is designed to interact on a “human” level by conversing in natural\r\nlanguage with its users, laughing at jokes, helping with tasks (e.g., scheduling, making lists,\r\nreminders, taking pictures), and most importantly responding to humans in emotionally appropriate\r\nways, all of which is meant to engage users in a human-like relationship. Jibo can\r\nalso function as a “wingman”; the primary reason Steve bought it. Steve is able to identify\r\na love interest to Jibo, say a date he brings home one evening, and Jibo then analyzes and\r\ncharacterizes the date based on proprietary learning algorithms (automatically updated based\r\non the successes/failures of all Jibos), and access to social networks and other “big” datasets.\r\nAs part of its data-gathering technique Jibo spontaneously strikes up conversations with the\r\nlove interest, often when Steve is in another room. One evening, Steve brings a woman he has\r\nbeen dating to home and introduces her to Jibo. He then goes into the kitchen to get dinner\r\nstarted. In conversation with the love interest, and without Steve’s knowledge, Jibo divulges\r\nseveral of Steve’s very sensitive personal anecdotes in order to increase Steve’s chances at\r\nromance.",
+    "title": "Jibo the Wingman",
+    "article_url": "http://www.tandfonline.com/doi/pdf/10.1080/08839514.2016.1229919?needAccess=true"
+  }
 ]
