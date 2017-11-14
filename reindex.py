@@ -1,7 +1,6 @@
 import json
 from elasticsearch import Elasticsearch
-#es = Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])
-es = Elasticsearch([{'host': 'velox.vulpes.pw', 'port': 9200}])
+es = Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])
 
 l = json.load(open("./articles"))
 
