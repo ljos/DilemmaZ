@@ -8,12 +8,11 @@
 <h1>{{ item.title}}</h1></br>
 <h4>{{ item.authors}}</h4></br>
 {{ item.dilemma_body}}</br>
-{{ item.dilemma_body}}</br>
-<h3>Logic</h3></br>
+<h3>Representation schema</h3></br>
 {% for line in item.logic %}
 {{ line|safe}}</br>
 {% endfor %}
-<h3>Representation schema</h3></br>
+<!--<h3>Representation schema</h3></br>
 <h4>Features: </h4>{% for line in item.feature%}
 {{ line|safe}}</br>
 {% endfor %}
@@ -23,7 +22,7 @@
 {% endfor %}
 <h4>Duty-value set: </h4>{% for line in item.duty_values%}
 {{ line|safe}}</br>
-{% endfor %}
+{% endfor %}-->
 
 <a href="{{ url_for('articles_edit', id=item.id) }}"> Edit </a><br>
 <a href="{{ url_for('article_json', id=item.id) }}"> Export </a>
