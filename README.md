@@ -1,4 +1,4 @@
-INFO381 Elasticsearch
+DilemmaZ
 =====================
 
 Simple editor and vizualiser for our elasticsearch frontend...or backend....we are not sure yet.  
