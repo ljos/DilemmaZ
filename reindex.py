@@ -1,6 +1,7 @@
 import json
 from elasticsearch import Elasticsearch
-es = Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])
+#es = Elasticsearch([{'host': '127.0.0.1', 'port': 9200}])
+es = Elasticsearch([{'host': 'velox.vulpes.pw', 'port': 9200}])
 
 l = json.load(open("./articles"))
 
@@ -13,9 +14,9 @@ for i in l:
     results["authors"] = i["authors"]
     results["dilemma_body"] = i["dilemma_body"]
     results["article_url"] = i["article_url"]
-    results["logic"] = "" 
+    results["logic"] = ""
     results["feature"] = ""
     results["actions"] = ""
-    results["case"] = "" 
+    results["case"] = ""
     results["duty_values"] = ""
     es.index(index='dilemma', doc_type='articles', body=results)
