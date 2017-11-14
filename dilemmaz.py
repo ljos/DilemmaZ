@@ -31,7 +31,7 @@ def articles_index():
     results["title"] = request.form.get("title")
     results["authors"] = request.form.get("authors")
     results["dilemma_body"] = request.form.get("dilemma_body")
-    results["article_url"] = request.form.get("article_url") 
+    results["article_url"] = request.form.get("article_url")
     results["logic"] = request.form.get("logic")
     results["feature"] = request.form.get("feature")
     results["actions"] = request.form.get("actions")
@@ -46,11 +46,11 @@ def _format_hit(hits):
     source["id"] = hits["_id"]
     source["type"] = hits["_type"]
     if source["logic"]:
-        source["logic"] = [i for i in source["logic"].split("\r\n")] 
+        source["logic"] = [i for i in source["logic"].split("\r\n")]
     else:
         source["logic"] = []
     if source["feature"]:
-        source["feature"] = [i for i in source["feature"].split("\r\n")] 
+        source["feature"] = [i for i in source["feature"].split("\r\n")]
     else:
         source["feature"] = []
     if source["duty_values"]:
@@ -149,7 +149,7 @@ def articles_edit(id):
     results["title"] = request.form.get("title")
     results["authors"] = request.form.get("authors")
     results["dilemma_body"] = request.form.get("dilemma_body")
-    results["article_url"] = request.form.get("article_url") 
+    results["article_url"] = request.form.get("article_url")
     results["logic"] = request.form.get("logic")
     results["feature"] = request.form.get("feature")
     results["actions"] = request.form.get("actions")

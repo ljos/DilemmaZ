@@ -13,9 +13,9 @@ for i in l:
     results["authors"] = i["authors"]
     results["dilemma_body"] = i["dilemma_body"]
     results["article_url"] = i["article_url"]
-    results["logic"] = "" 
+    results["logic"] = ""
     results["feature"] = ""
     results["actions"] = ""
-    results["case"] = "" 
+    results["case"] = ""
     results["duty_values"] = ""
     es.index(index='dilemma', doc_type='articles', body=results)
