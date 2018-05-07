@@ -160,11 +160,11 @@ def articles_edit(id):
     flash("Updated article", "success")
     return redirect(url_for('articles_edit', id=id))
 
-@app.route("/articles/delete/<id>")
-def articles_delete(id):
-    es.delete(index='dilemma', doc_type='articles', id=id)
-    flash("Deleted article", "success")
-    return redirect(url_for('index'))
+# @app.route("/articles/delete/<id>")
+# def articles_delete(id):
+#     es.delete(index='dilemma', doc_type='articles', id=id)
+#     flash("Deleted article", "success")
+#     return redirect(url_for('index'))
 
 @app.route("/guidelines")
 def guidelines():
